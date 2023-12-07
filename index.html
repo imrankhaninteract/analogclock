@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://images.pexels.com/photos/603559/pexels-photo-603559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .container {
+        text-align: center;
+        width: 400px; /* Increased container width */
+        
+      }
+      .box {
+        display: inline-block;
+        height: 400px; /* Increased box height */
+        position: relative;
+        transition: all 0.2s ease;
+      }
+      .clock {
+        border-radius: 120px; /* Increased border-radius */
+        border: 6px solid #fff; /* Increased border thickness */
+        height: 160px; /* Increased clock height */
+        width: 160px; /* Increased clock width */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .clock:after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        top: 4px; /* Increased top position */
+        left: 50%;
+        height: 76px; /* Increased height of clock hands */
+        width: 8px; /* Increased width of clock hands */
+        border-radius: 10px; /* Increased border-radius of clock hands */
+        transform-origin: 50% 97%;
+        animation: grdAiguille 2s linear infinite;
+      }
+      @keyframes grdAiguille {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .clock:before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        top: 8px; 
+        left: 50%;
+        height: 70px; 
+        width: 8px; 
+        border-radius: 10px; 
+        transform-origin: 50% 94%;
+        animation: ptAiguille 12s linear infinite;
+      }
+      @keyframes ptAiguille {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="clock"></div>
+      </div>
+    </div>
+  </body>
+</html>
