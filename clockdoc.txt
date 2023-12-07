@@ -1,1 +1,10 @@
 How to Create an Analog Clock with HTML CSS.
+In the process of constructing an HTML document, the initial step involves defining the document type as HTML followed by declaring the opening HTML tag. Moving into the head section, CSS styles are embedded to format the document s appearance. The body s CSS properties are set next, with margins and padding adjusted to zero to eliminate default spacing, a background image is included through a URL, and the body s height is set to occupy 100percent of the viewport.
+
+To manage layout, flexbox is implemented using  display  flex  to arrange items vertically within the body using  align items , while the content is justified to the start using  justify content . Specific classes are created in the CSS to format various elements. The   container  class is defined to center align text within a 400 pixel width box, while the  box  class is designed to display an inline block with a height of 400 pixels and relative positioning to accommodate child elements, applying a smooth transition effect.
+
+A  clock  class is formulated to create a circular clock with a 120 pixel border radius, a 6 pixel white border, and set dimensions of 160 pixels. Positioned absolutely within its parent element, it s centered using  top  and  left  at 50percent each and adjusted with  transform  translate  50percent,  50percent  . Clock hands are fashioned using pseudo elements and positioned precisely, with transformations and animations applied to simulate their movement.
+
+Following the style section, the body section begins. A div with a class of  container  is created, inside which another div with a class of  box  is generated. Finally, within the box div, a div with a class of  clock  is formed to visualize the clock structure.
+
+Subsequently, the divs are closed, and the body and HTML sections are concluded, outlining the structural and visual elements defined within the HTML and CSS code.
