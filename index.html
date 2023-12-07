@@ -1,49 +1,53 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Defines the document type as HTML -->
 <html>
   <head>
     <style>
+      /* CSS styles for the document */
       body {
+        /* Setting margin and padding to 0 to remove default spacing */
         margin: 0;
         padding: 0;
+        /* Adding a background image to the body */
         background-image: url("https://images.pexels.com/photos/603559/pexels-photo-603559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        height: 100vh; /* Setting body height to 100% of the viewport height */
+        display: flex; /* Using flexbox for layout */
+        align-items: center; /* Aligning items vertically */
+        justify-content: flex-start; /* Justifying content to the start */
       }
       .container {
-        text-align: center;
-        width: 400px; /* Increased container width */
-        
+        text-align: center; /* Center aligning the text */
+        width: 400px; /* Setting container width */
       }
       .box {
-        display: inline-block;
-        height: 400px; /* Increased box height */
-        position: relative;
-        transition: all 0.2s ease;
+        display: inline-block; /* Displaying the box as an inline block */
+        height: 400px; /* Setting box height */
+        position: relative; /* Setting position to relative for absolute positioning of child elements */
+        transition: all 0.2s ease; /* Adding a smooth transition effect */
       }
       .clock {
-        border-radius: 120px; /* Increased border-radius */
-        border: 6px solid #fff; /* Increased border thickness */
-        height: 160px; /* Increased clock height */
-        width: 160px; /* Increased clock width */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        border-radius: 120px; /* Making clock round by increasing border-radius */
+        border: 6px solid #fff; /* Adding a white border around the clock */
+        height: 160px; /* Setting clock height */
+        width: 160px; /* Setting clock width */
+        position: absolute; /* Positioning the clock absolutely */
+        top: 50%; /* Placing clock at 50% from the top */
+        left: 50%; /* Placing clock at 50% from the left */
+        transform: translate(-50%, -50%); /* Centering the clock */
       }
+      /* Styling for clock hands animation */
       .clock:after {
         content: "";
         position: absolute;
         background-color: #fff;
-        top: 4px; /* Increased top position */
-        left: 50%;
-        height: 76px; /* Increased height of clock hands */
-        width: 8px; /* Increased width of clock hands */
-        border-radius: 10px; /* Increased border-radius of clock hands */
-        transform-origin: 50% 97%;
-        animation: grdAiguille 2s linear infinite;
+        top: 4px; /* Positioning clock hand */
+        left: 50%; /* Positioning clock hand */
+        height: 76px; /* Setting clock hand height */
+        width: 8px; /* Setting clock hand width */
+        border-radius: 10px; /* Making clock hand ends rounded */
+        transform-origin: 50% 97%; /* Setting transform origin */
+        animation: grdAiguille 2s linear infinite; /* Applying animation to clock hand */
       }
+      /* Keyframes for clock hand animation */
       @keyframes grdAiguille {
         0% {
           transform: rotate(0deg);
@@ -52,18 +56,20 @@
           transform: rotate(360deg);
         }
       }
+      /* Styling for another clock hand */
       .clock:before {
         content: "";
         position: absolute;
         background-color: #fff;
-        top: 8px; 
-        left: 50%;
-        height: 70px; 
-        width: 8px; 
-        border-radius: 10px; 
-        transform-origin: 50% 94%;
-        animation: ptAiguille 12s linear infinite;
+        top: 8px; /* Positioning another clock hand */
+        left: 50%; /* Positioning another clock hand */
+        height: 70px; /* Setting another clock hand height */
+        width: 8px; /* Setting another clock hand width */
+        border-radius: 10px; /* Making clock hand ends rounded */
+        transform-origin: 50% 94%; /* Setting transform origin */
+        animation: ptAiguille 12s linear infinite; /* Applying animation to another clock hand */
       }
+      /* Keyframes for another clock hand animation */
       @keyframes ptAiguille {
         0% {
           transform: rotate(0deg);
@@ -77,9 +83,8 @@
   <body>
     <div class="container">
       <div class="box">
-        <div class="clock"></div>
+        <div class="clock"></div> <!-- HTML structure for the clock -->
       </div>
     </div>
   </body>
 </html>
-
